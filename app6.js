@@ -3,17 +3,15 @@ let inputplaceholderex6 = document.getElementById('input-count-ex6');
 let resultex6 = document.getElementById('result-ex6');
 let btnvowelex6 = document.getElementById('btn-vowel-ex6');
 
-
+btnvowelex6.addEventListener('click', () => {
+  const inputplaceholdervowelex6 = inputplaceholderex6.value;
+  let resultvowelex6 = vowelcountex6 (inputplaceholdervowelex6);
+  
+  resultex6.innerHTML = 'Número de vocales: ' + vowels;
+})
 
 function vowelcountex6(str)
 {
-  btnvowelex6.addEventListener('click', () => {
-    const inputplaceholdervowelex6 = inputplaceholderex6.value;
-    
-    let resultvowelex6 = vowelcountex6 (inputplaceholdervowelex6);
-    
-    resultvowelex6.innerHTML = 'Número de vocales: ' + obj.name;
-  
   let vowela = 'aA';
   let a = 0;
   let vowele = 'eE';
@@ -54,9 +52,8 @@ function vowelcountex6(str)
   
   }
 
-  let obj = JSON.parse ({a, e, i, o, u});
+  return {a, e, i, o, u};
   
-})
 }
 
 //console.log(vowelcountex6("almuu"));
